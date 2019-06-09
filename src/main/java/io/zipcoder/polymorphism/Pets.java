@@ -3,6 +3,7 @@ package io.zipcoder.polymorphism;
 public class Pets {
     String name = "";
     String speak = "";
+    String type = "";
 
     public Pets() {
     }
@@ -10,6 +11,10 @@ public class Pets {
     public Pets(String name, String speak) {
         this.name = name;
         this.speak = speak;
+    }
+
+    public Pets(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -24,7 +29,4 @@ public class Pets {
         this.name = name;
     }
 
-    public void setSpeak(String speak) {
-        this.speak = speak;
-    }
 }
