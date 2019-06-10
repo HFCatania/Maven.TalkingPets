@@ -35,35 +35,35 @@ public class MainApplication {
                     System.out.println("Great, you have pets! What kind of pet do you have?");
 
 
-                    for (int i = 1; i < petNumber; i++) {
+                    for (int i = 1; i <= petNumber; i++) {
                         String kindOfPet = Input.inputString("What kind of animal is pet number " + i + "?");
                         String petName = Input.inputString("What is pet " + i + "'s name?");
                         switch (kindOfPet.toLowerCase()) {
-                            default:
-                                System.out.println("Pffft...   not a real animal.");
-                                i--;
-                                break;
+
                             case ("dog"):
-                                Dog dog = new Dog(kindOfPet, petName);
+                                Dog dog = new Dog(petName, kindOfPet);
                                 petList.add(dog);
                                 break;
 
                             case ("cat"):
-                                Cat cat = new Cat(kindOfPet, petName);
+                                Cat cat = new Cat(petName, kindOfPet);
                                 petList.add(cat);
                                 break;
 
                             case ("child"):
-                                Child child = new Child(kindOfPet, petName);
+                                Child child = new Child(petName, kindOfPet);
                                 petList.add(child);
                                 break;
-
+                            default:
+                                System.out.println("Pffft...   not a real animal.");
+                                i--;
+                                break;
                         }
                     }
                 }
             //System.out.println(petList.toArray().toString());
         for (int i = 0; i < petList.size(); i++){
-            System.out.println(petList.get(i).getName());
+            System.out.println( "Pet " + i + " is a " + petList.get(i).getName() + " and its name is " + petList.get(i).getType() + " and it goes " + petList.get(i).speak);
 
         }
             System.exit(0);

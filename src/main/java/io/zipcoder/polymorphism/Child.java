@@ -12,4 +12,9 @@ public class Child extends Pets {
         super(name, speak);
         this.speak = "waaaah";
     }
+
+    @Override
+    public void speak() {
+        System.out.println("waaah");
+    }
 }

@@ -13,4 +13,8 @@ public class Cat extends Pets{
         super(name, speak);
         this.speak = "meow";
     }
+    @Override
+    public void speak() {
+        System.out.println("meowth");
+    }
 }

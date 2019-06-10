@@ -8,11 +8,13 @@ public class Pets {
     public Pets() {
     }
 
-    public Pets(String name, String speak) {
+    public Pets(String name, String type) {
         this.name = name;
-        this.speak = speak;
+        this.type = type;
     }
+    public void speak(){
 
+    }
     public Pets(String name) {
         this.name = name;
     }
@@ -21,8 +23,8 @@ public class Pets {
         return name;
     }
 
-    public String getSpeak() {
-        return speak;
+    public String getType() {
+        return type;
     }
 
     public void setName(String name) {
