@@ -63,7 +63,7 @@ public class MainApplication {
                 }
             //System.out.println(petList.toArray().toString());
         for (int i = 0; i < petList.size(); i++){
-            System.out.println( "Pet " + i + " is a " + petList.get(i).getName() + " and its name is " + petList.get(i).getType() + " and it goes " + petList.get(i).speak);
+            System.out.println( "Pet " + i + " is a " + petList.get(i).getType() + " and its name is " + petList.get(i).getName() + " and it goes " + petList.get(i).speak);
 
         }
             System.exit(0);
