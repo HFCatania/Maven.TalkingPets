@@ -14,7 +14,7 @@ public class PetSorter implements Comparator<Pets> {
             } else {
                 if (o2.name.compareTo(o1.name) > 0) {
                     return 1;
-                } else if (o2.name.compareTo(o1.type) < 1) {
+                } else if (o2.name.compareTo(o1.name) < 1) {
                     return -1;
                 } else
                     return 0;
