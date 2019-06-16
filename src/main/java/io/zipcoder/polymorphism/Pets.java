@@ -1,6 +1,6 @@
 package io.zipcoder.polymorphism;
 
-public class Pets {
+public class Pets implements Comparable<Pets> {
     String name = "";
     String speak = "";
     String type = "";
@@ -12,9 +12,11 @@ public class Pets {
         this.name = name;
         this.type = type;
     }
-    public void speak(){
+
+    public void speak() {
 
     }
+
     public Pets(String name) {
         this.name = name;
     }
@@ -31,4 +33,20 @@ public class Pets {
         this.name = name;
     }
 
+    @Override
+    public int compareTo(Pets o) {
+        if (this.name.toLowerCase().compareTo(o.name.toLowerCase()) > 0) {
+            return 1;
+        } else if (this.name.toLowerCase().compareTo(o.name.toLowerCase()) < 1) {
+            return -1;
+        } else {
+            if (this.type.compareTo(o.type) > 0) {
+                return 1;
+            } else if (this.type.compareTo(o.type) < 1) {
+                return -1;
+            } else
+                return 0;
+
+        }
+    }
 }
